@@ -34,6 +34,7 @@ def sing(x):
 	res = ( h(x) * sin(x) )/( abs((1/a) * cos((m*x)/4))**n2 + abs((1/b) * sin((m*x)/4))**n3 )**(n1)
 	return res
 
+# the main mathematical function
 def f(x,y):
 	return A * cosg( C * cosg(x) + D * sing(y)) + B * sing( C* cosg(x) + D * sing(y))
 
@@ -43,7 +44,7 @@ v = np.linspace(-lim-1.5,lim-1.5, 100)
 x,y = np.meshgrid(u,v)
 
 
-
+# define the run function
 def run():
 	z = f(x,y)
 	#print cosg(x)
